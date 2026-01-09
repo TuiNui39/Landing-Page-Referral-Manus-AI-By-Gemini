@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhận 1.000 Credits Miễn Phí - Manus AI Agent</title>
+    <meta name="description" content="Đăng ký Manus AI ngay hôm nay. Nhận ngay 1.000 credits + 300 credits mỗi ngày. Tự động hóa nghiên cứu và viết code.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Be Vietnam Pro -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Be Vietnam Pro"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9', // Sky blue
+                            600: '#0284c7',
+                            900: '#0c4a6e',
+                        },
+                        accent: {
+                            500: '#8b5cf6', // Violet
+                        }
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            background-color: #0f172a; /* Slate 900 */
+            color: #f8fafc;
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-bg {
+            background: radial-gradient(circle at 50% 50%, rgba(14, 165, 233, 0.15) 0%, rgba(15, 23, 42, 0) 50%);
+        }
+        
+        .modal { opacity: 0; visibility: hidden; transition: all 0.3s; }
+        .modal.active { opacity: 1; visibility: visible; }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col font-sans relative">
+
+    <!-- Navbar -->
+    <nav class="w-full py-4 px-6 fixed top-0 z-50 glass-card border-b border-white/10 transition-all duration-300" id="navbar">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i data-lucide="sparkles" class="text-sky-400 w-6 h-6"></i>
+                <span class="text-xl font-bold tracking-tight">Manus<span class="text-sky-400">AI</span> Promo</span>
+            </div>
+            <a href="#claim-section" class="hidden md:block bg-white/10 hover:bg-white/20 text-white px-4 py-2 rounded-full text-sm font-medium transition-all border border-white/20">
+                Nhận Credits Miễn Phí
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative pt-32 pb-20 px-6 overflow-hidden hero-bg">
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-300 text-sm mb-6 animate-fade-in-up">
+                <span class="relative flex h-2 w-2">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-2 w-2 bg-sky-500"></span>
+                </span>
+                Ưu đãi đặc biệt cho người dùng mới
+            </div>
+            
+            <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6">
+                Mở khóa Sức mạnh AI Hàng đầu<br>
+                <span class="gradient-text">Nhận 1.000 Credits Miễn Phí!</span>
+            </h1>
+            
+            <p class="text-lg md:text-xl text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed">
+                Trải nghiệm AI Agent giúp tự động hóa nghiên cứu, lập trình và phân tích dữ liệu chỉ trong vài giây. <span class="text-white font-medium">Đăng ký ngay để dùng thử miễn phí (Không cần thẻ tín dụng).</span>
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center" id="claim-section">
+                <!-- REFERRAL LINK BUTTON -->
+                <a href="#" onclick="copyLink()" class="group relative px-8 py-4 bg-sky-500 hover:bg-sky-400 text-white rounded-full font-bold text-lg shadow-[0_0_20px_rgba(14,165,233,0.5)] hover:shadow-[0_0_30px_rgba(14,165,233,0.7)] transition-all transform hover:-translate-y-1 w-full sm:w-auto text-center flex items-center justify-center gap-2">
+                    <i data-lucide="zap" class="w-5 h-5 fill-current"></i>
+                    Nhận 1.000 Credits Ngay
+                </a>
+                <p class="text-sm text-slate-500 mt-2 sm:mt-0">*Dành riêng cho tài khoản mới</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Use Cases Section -->
+    <section class="py-20 px-6 bg-slate-900">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">1.000 Credits làm được gì?</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">Credits miễn phí của bạn có giá trị thực tế. Đây là những gì bạn có thể làm ngay lập tức:</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Use Case 1 -->
+                <div class="glass-card p-6 rounded-2xl border-t-4 border-t-sky-500 hover:-translate-y-1 transition-transform">
+                    <div class="bg-sky-500/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4 text-sky-400">
+                        <i data-lucide="search" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Nghiên cứu sâu</h3>
+                    <p class="text-slate-400 text-sm">Tìm kiếm thông tin chuyên sâu kèm trích dẫn nguồn cho báo cáo hoặc luận văn.</p>
+                </div>
+
+                <!-- Use Case 2 -->
+                <div class="glass-card p-6 rounded-2xl border-t-4 border-t-purple-500 hover:-translate-y-1 transition-transform">
+                    <div class="bg-purple-500/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4 text-purple-400">
+                        <i data-lucide="code" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Trợ lý Lập trình</h3>
+                    <p class="text-slate-400 text-sm">Viết code phức tạp, sửa lỗi bug, hoặc tối ưu hóa mã nguồn trong tích tắc.</p>
+                </div>
+
+                <!-- Use Case 3 -->
+                <div class="glass-card p-6 rounded-2xl border-t-4 border-t-emerald-500 hover:-translate-y-1 transition-transform">
+                    <div class="bg-emerald-500/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4 text-emerald-400">
+                        <i data-lucide="file-text" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Phân tích Dữ liệu</h3>
+                    <p class="text-slate-400 text-sm">Tải lên tệp PDF hoặc Excel và để AI tóm tắt thông tin chi tiết ngay lập tức.</p>
+                </div>
+
+                <!-- Use Case 4 -->
+                <div class="glass-card p-6 rounded-2xl border-t-4 border-t-pink-500 hover:-translate-y-1 transition-transform">
+                    <div class="bg-pink-500/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4 text-pink-400">
+                        <i data-lucide="image" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Tạo Hình ảnh</h3>
+                    <p class="text-slate-400 text-sm">Tạo hình ảnh chất lượng cao cho slide thuyết trình hoặc mạng xã hội.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features / Benefits Grid -->
+    <section class="py-20 px-6 bg-slate-900/50">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">Quyền lợi đặc biệt của bạn</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Benefit 1 -->
+                <div class="glass-card p-8 rounded-2xl hover:bg-white/5 transition-all">
+                    <div class="w-12 h-12 bg-sky-500/20 rounded-xl flex items-center justify-center mb-4 text-sky-400">
+                        <i data-lucide="gift" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Thưởng Chào mừng</h3>
+                    <p class="text-slate-400">Nhận ngay <span class="text-white font-semibold">1.000 Credits</span> khi đăng ký. Bắt đầu sử dụng tính năng cao cấp miễn phí.</p>
+                </div>
+
+                <!-- Benefit 2 -->
+                <div class="glass-card p-8 rounded-2xl hover:bg-white/5 transition-all">
+                    <div class="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center mb-4 text-purple-400">
+                        <i data-lucide="refresh-cw" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Nạp lại Hàng ngày</h3>
+                    <p class="text-slate-400">Dùng hết? Chúng tôi tặng thêm <span class="text-white font-semibold">300 Credits mỗi ngày</span> (làm mới vào nửa đêm).</p>
+                </div>
+
+                <!-- Benefit 3 -->
+                <div class="glass-card p-8 rounded-2xl hover:bg-white/5 transition-all">
+                    <div class="w-12 h-12 bg-emerald-500/20 rounded-xl flex items-center justify-center mb-4 text-emerald-400">
+                        <i data-lucide="bot" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Truy cập Đầy đủ</h3>
+                    <p class="text-slate-400">Sử dụng các mô hình AI thông minh nhất. Không giới hạn tính năng cho người dùng dùng thử.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Claim -->
+    <section class="py-20 px-6 relative overflow-hidden">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">3 Bước Đơn giản để Nhận Thưởng</h2>
+            
+            <div class="space-y-6">
+                <!-- Step 1 -->
+                <div class="flex items-center gap-6 p-6 rounded-2xl bg-white/5 border border-white/5 relative overflow-hidden group">
+                    <div class="absolute left-0 top-0 bottom-0 w-1 bg-sky-500 group-hover:h-full transition-all"></div>
+                    <div class="text-5xl font-bold text-white/10 group-hover:text-sky-500/20 transition-colors">01</div>
+                    <div>
+                        <h4 class="text-xl font-bold text-white mb-1">Nhấn vào Nút nhận thưởng</h4>
+                        <p class="text-slate-400">Nhấn "Nhận 1.000 Credits Ngay" trên trang này để đến trang đăng ký chính thức.</p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="flex items-center gap-6 p-6 rounded-2xl bg-white/5 border border-white/5 relative overflow-hidden group">
+                    <div class="absolute left-0 top-0 bottom-0 w-1 bg-purple-500 group-hover:h-full transition-all"></div>
+                    <div class="text-5xl font-bold text-white/10 group-hover:text-purple-500/20 transition-colors">02</div>
+                    <div>
+                        <h4 class="text-xl font-bold text-white mb-1">Đăng ký Miễn phí</h4>
+                        <p class="text-slate-400">Đăng ký bằng Tài khoản Google hoặc Email của bạn (Không có phí ẩn).</p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="flex items-center gap-6 p-6 rounded-2xl bg-white/5 border border-white/5 relative overflow-hidden group">
+                    <div class="absolute left-0 top-0 bottom-0 w-1 bg-emerald-500 group-hover:h-full transition-all"></div>
+                    <div class="text-5xl font-bold text-white/10 group-hover:text-emerald-500/20 transition-colors">03</div>
+                    <div>
+                        <h4 class="text-xl font-bold text-white mb-1">Nhận Credits Tức thì</h4>
+                        <p class="text-slate-400">1.000 Credits sẽ tự động được thêm vào tài khoản của bạn. Bắt đầu sử dụng ngay!</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <a href="#" onclick="copyLink()" class="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white transition-all duration-200 bg-gradient-to-r from-sky-500 to-blue-600 rounded-full hover:from-sky-400 hover:to-blue-500 shadow-lg hover:shadow-sky-500/25">
+                    Đăng Ký Ngay
+                    <i data-lucide="arrow-right" class="ml-2 w-5 h-5"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-slate-950 text-slate-600 text-sm border-t border-white/5 mb-16 md:mb-0">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-8">
+            <div>
+                <p class="mb-4 text-slate-500">
+                    Trang web này là đối tác liên kết nhằm quảng bá quyền lợi cho người dùng mới. <br>Chúng tôi không thuộc đội ngũ phát triển chính thức của Manus AI.
+                </p>
+                <p class="text-xs text-slate-600">© 2026 AI Promo Partner. All rights reserved.</p>
+            </div>
+            
+            <div class="md:text-right flex flex-col md:items-end justify-center">
+                <div class="flex flex-wrap gap-4 md:gap-6 mb-4">
+                    <button onclick="toggleModal('privacy-modal')" class="hover:text-slate-300 transition-colors">Privacy Policy</button>
+                    <button onclick="toggleModal('terms-modal')" class="hover:text-slate-300 transition-colors">Terms of Service</button>
+                    <a href="#" class="hover:text-slate-300 transition-colors">Liên hệ</a>
+                </div>
+                <p class="text-xs text-slate-700 max-w-xs md:ml-auto">
+                    *This site is not a part of the Facebook website or Facebook Inc. Additionally, This site is NOT endorsed by Facebook in any way.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" class="fixed bottom-0 left-0 w-full bg-slate-900 border-t border-white/10 p-4 z-50 transform transition-transform duration-300 translate-y-full">
+        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
+            <p class="text-slate-400 text-sm">Chúng tôi sử dụng cookie để cải thiện trải nghiệm của bạn.</p>
+            <div class="flex gap-4">
+                <button onclick="acceptCookies()" class="px-6 py-2 bg-sky-600 hover:bg-sky-500 text-white text-sm font-medium rounded-lg transition-colors">Chấp nhận</button>
+                <button onclick="toggleModal('privacy-modal')" class="text-slate-400 hover:text-white text-sm underline">Xem thêm</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Privacy Modal (Simplified) -->
+    <div id="privacy-modal" class="modal fixed inset-0 z-[60] flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm" onclick="closeModalOnOutsideClick(event, 'privacy-modal')">
+        <div class="modal-content bg-slate-900 border border-white/10 w-full max-w-2xl rounded-2xl p-6 flex flex-col">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-xl font-bold text-white">Chính sách bảo mật</h3>
+                <button onclick="toggleModal('privacy-modal')" class="text-slate-400 hover:text-white"><i data-lucide="x" class="w-6 h-6"></i></button>
+            </div>
+            <div class="text-slate-400 text-sm space-y-4">
+                <p>Chúng tôi tôn trọng quyền riêng tư của bạn. Trang này không thu thập dữ liệu cá nhân trực tiếp. Việc đăng ký diễn ra trên trang web chính thức của Manus AI.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Terms Modal (Simplified) -->
+    <div id="terms-modal" class="modal fixed inset-0 z-[60] flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm" onclick="closeModalOnOutsideClick(event, 'terms-modal')">
+        <div class="modal-content bg-slate-900 border border-white/10 w-full max-w-2xl rounded-2xl p-6 flex flex-col">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-xl font-bold text-white">Điều khoản dịch vụ</h3>
+                <button onclick="toggleModal('terms-modal')" class="text-slate-400 hover:text-white"><i data-lucide="x" class="w-6 h-6"></i></button>
+            </div>
+            <div class="text-slate-400 text-sm space-y-4">
+                <p>Bằng cách sử dụng trang web này, bạn thừa nhận chúng tôi là đối tác liên kết. Các ưu đãi có thể thay đổi bởi Manus AI.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+
+        // Navbar blur effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-slate-900/90', 'shadow-lg');
+            } else {
+                navbar.classList.remove('bg-slate-900/90', 'shadow-lg');
+            }
+        });
+
+        // Referral Link Function
+        function copyLink() {
+            // YOUR REFERRAL LINK
+            const referralLink = "https://manus.im/invitation/U9VNR08GX2MX";
+            window.open(referralLink, '_blank');
+        }
+
+        // Modal Logic
+        function toggleModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.classList.toggle('active');
+            document.body.style.overflow = modal.classList.contains('active') ? 'hidden' : 'auto';
+        }
+        function closeModalOnOutsideClick(event, modalId) {
+            if (event.target.id === modalId) toggleModal(modalId);
+        }
+
+        // Cookie Logic
+        function acceptCookies() {
+            document.getElementById('cookie-banner').style.transform = 'translateY(100%)';
+            localStorage.setItem('cookiesAccepted', 'true');
+        }
+        window.addEventListener('load', () => {
+            if (!localStorage.getItem('cookiesAccepted')) {
+                setTimeout(() => {
+                    document.getElementById('cookie-banner').style.transform = 'translateY(0)';
+                }, 1000);
+            }
+        });
+    </script>
+</body>
+</html>
