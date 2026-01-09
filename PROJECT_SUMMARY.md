@@ -5,15 +5,16 @@
 **ชื่อโปรเจค:** Landing Page Referral Manus AI By Gemini  
 **Domain:** manus-flow.com  
 **วันที่สร้าง:** 9 มกราคม 2026  
-**สถานะ:** ✅ Deploy สำเร็จและพร้อมใช้งาน
+**สถานะ:** ✅ Deploy สำเร็จและพร้อมใช้งาน  
+**ภาษาปัจจุบัน:** 🇺🇸 English (อังกฤษ)
 
 ---
 
 ## URLs ที่เกี่ยวข้อง
 
 ### เว็บไซต์ที่ใช้งานได้
-- 🌐 **https://manus-flow.com** (Primary Domain - Active)
-- 🌐 **https://www.manus-flow.com** (Subdomain - Pending SSL)
+- 🌐 **https://manus-flow.com** (Primary Domain - English Version)
+- 🌐 **https://www.manus-flow.com** (Subdomain - English Version)
 - 🌐 **https://manus-flow-landing.pages.dev** (Cloudflare Pages URL)
 
 ### Repository & Dashboard
@@ -27,7 +28,13 @@
 
 ```
 Landing-Page-Referral-Manus-AI-By-Gemini/
-├── index.html              # Landing page หลัก (HTML + Tailwind CSS)
+├── index.html              # Landing page หลัก (ภาษาปัจจุบัน)
+├── versions/               # โฟลเดอร์สำหรับเก็บ backup ทุกภาษา
+│   ├── README.md          # คู่มือการใช้งานหลายภาษา
+│   ├── th/                # 🇹🇭 Thai Version
+│   │   └── index.html
+│   └── en/                # 🇺🇸 English Version (Active)
+│       └── index.html
 ├── README.md               # คำอธิบายโปรเจค
 ├── wrangler.toml          # Cloudflare Wrangler configuration
 ├── .gitignore             # Git ignore rules
@@ -36,11 +43,70 @@ Landing-Page-Referral-Manus-AI-By-Gemini/
 
 ---
 
-## เทคโนโลยีที่ใช้
+## ภาษาที่รองรับ
+
+### 🇹🇭 Thai (ไทย)
+- **Path:** `versions/th/index.html`
+- **Status:** ✅ Backed up
+- **Last Updated:** 2026-01-09
+- **Description:** เวอร์ชันภาษาไทยต้นฉบับ
+
+### 🇺🇸 English (อังกฤษ)
+- **Path:** `versions/en/index.html`
+- **Status:** ✅ Active (Deployed)
+- **Last Updated:** 2026-01-09
+- **Description:** เวอร์ชันภาษาอังกฤษที่กำลังใช้งานอยู่
+
+---
+
+## การสลับภาษา
+
+### วิธีเปลี่ยนเป็นภาษาไทย
+
+```bash
+cd /home/ubuntu/manus-flow-landing
+cp versions/th/index.html index.html
+git add index.html
+git commit -m "Switch to Thai version"
+git push origin main
+wrangler pages deploy . --project-name=manus-flow-landing
+```
+
+### วิธีเปลี่ยนเป็นภาษาอังกฤษ
+
+```bash
+cd /home/ubuntu/manus-flow-landing
+cp versions/en/index.html index.html
+git add index.html
+git commit -m "Switch to English version"
+git push origin main
+wrangler pages deploy . --project-name=manus-flow-landing
+```
+
+### วิธีเพิ่มภาษาใหม่
+
+1. สร้างโฟลเดอร์ใหม่: `versions/{language_code}/`
+2. คัดลอกและแปล `index.html`
+3. บันทึกไฟล์: `versions/{language_code}/index.html`
+4. Commit และ Push ขึ้น GitHub
+5. Deploy เมื่อต้องการใช้งาน
+
+**ตัวอย่าง Language Codes:**
+- `th` - Thai (ไทย)
+- `en` - English (อังกฤษ)
+- `zh` - Chinese (中文)
+- `ja` - Japanese (日本語)
+- `ko` - Korean (한국어)
+- `es` - Spanish (Español)
+- `fr` - French (Français)
+
+---
+
+## เทคโนโลジีที่ใช้
 
 - **Frontend:** HTML5, Tailwind CSS (via CDN), JavaScript
 - **Icons:** Lucide Icons
-- **Fonts:** Google Fonts (Inter, Noto Sans Thai)
+- **Fonts:** Google Fonts (Inter - for English, Inter + Noto Sans Thai - for Thai)
 - **Hosting:** Cloudflare Pages
 - **DNS:** Cloudflare DNS
 - **SSL/TLS:** Cloudflare Universal SSL
@@ -55,17 +121,20 @@ Landing-Page-Referral-Manus-AI-By-Gemini/
 - 📱 Responsive Design รองรับทุก Device
 - 🎨 Glass Morphism UI Effects
 - ⚡ Fast Loading (Static HTML)
+- 🌍 Multi-language Support (Thai, English, และเพิ่มเติมได้)
 
-### 2. Content Sections
-- **Hero Section:** CTA สำหรับรับ 1,000 เครดิตฟรี
-- **Use Cases:** แสดงตัวอย่างการใช้งาน (Deep Research, Coding, Data Analysis, Image Gen)
-- **Benefits Grid:** สิทธิพิเศษที่ได้รับ (Welcome Bonus, Daily Refill, Full Capabilities)
-- **FAQ Section:** คำถามที่พบบ่อย
-- **Footer:** ข้อมูลติดต่อและ Social Links
+### 2. Content Sections (English Version)
+- **Hero Section:** CTA for claiming 1,000 free credits
+- **Use Cases:** Examples (Deep Research, Coding, Data Analysis, Image Gen)
+- **Benefits Grid:** Exclusive benefits (Welcome Bonus, Daily Refill, Full Access)
+- **How to Claim:** 3 simple steps
+- **FAQ Section:** Frequently asked questions
+- **Footer:** Contact info and social links
 
 ### 3. Referral Integration
 - 🔗 **Referral Link:** https://manus.im/invitation/U9VNR08GX2MX
-- 🎯 ปุ่ม CTA เปิด Referral Link ในแท็บใหม่
+- 🎯 CTA buttons open referral link in new tab
+- 📋 Copy link functionality with modal confirmation
 
 ---
 
@@ -76,7 +145,7 @@ Landing-Page-Referral-Manus-AI-By-Gemini/
 | Type | Name | Content | Proxy | Status |
 |------|------|---------|-------|--------|
 | CNAME | @ | manus-flow-landing.pages.dev | ☁️ Proxied | ✅ Active |
-| CNAME | www | manus-flow-landing.pages.dev | ☁️ Proxied | ⏳ Pending |
+| CNAME | www | manus-flow-landing.pages.dev | ☁️ Proxied | ✅ Active |
 
 ### Nameservers
 - emely.ns.cloudflare.com
@@ -93,9 +162,9 @@ Landing-Page-Referral-Manus-AI-By-Gemini/
 - **Created:** 2026-01-09 08:38:11 UTC
 
 ### www.manus-flow.com
-- **Status:** ⏳ Pending
+- **Status:** ✅ Active
 - **Verification:** ✅ Active
-- **SSL Certificate:** ⏳ Pending (รอ 5-15 นาที)
+- **SSL Certificate:** ✅ Active (Google Trust Services)
 - **Created:** 2026-01-09 08:38:23 UTC
 
 ---
@@ -111,13 +180,15 @@ Landing-Page-Referral-Manus-AI-By-Gemini/
 5. ✅ Deploy ไฟล์ไป Cloudflare Pages
 6. ✅ เพิ่ม Custom Domain (manus-flow.com, www.manus-flow.com)
 7. ✅ ตั้งค่า DNS Records
-8. ✅ รอ SSL Certificate Provisioning
+8. ✅ SSL Certificate Provisioning สำเร็จ
+9. ✅ สร้างโครงสร้างไฟล์สำหรับหลายภาษา
+10. ✅ Backup โค้ดภาษาไทย
+11. ✅ Deploy โค้ดภาษาอังกฤษ
 
 ### คำสั่งที่ใช้
 
 ```bash
 # Deploy to Cloudflare Pages
-wrangler pages project create manus-flow-landing --production-branch main
 wrangler pages deploy . --project-name=manus-flow-landing
 
 # Add Custom Domains (via API)
@@ -133,7 +204,7 @@ curl -X POST "https://api.cloudflare.com/client/v4/accounts/{account_id}/pages/p
 
 ### วิธีอัปเดตเว็บไซต์
 
-1. แก้ไขไฟล์ `index.html` ใน local
+1. แก้ไขไฟล์ `index.html` ใน local (หรือแก้ไขใน `versions/{lang}/index.html`)
 2. Commit และ Push ขึ้น GitHub:
    ```bash
    git add .
@@ -169,9 +240,13 @@ curl -X POST "https://api.cloudflare.com/client/v4/accounts/{account_id}/pages/p
 
 ## หมายเหตุสำคัญ
 
+### Multi-language Management
+- ไฟล์ภาษาทั้งหมดถูก backup ไว้ใน `versions/` directory
+- เปลี่ยนภาษาได้โดยคัดลอกไฟล์จาก `versions/{lang}/index.html` มาเป็น `index.html`
+- แนะนำให้แก้ไขไฟล์ใน `versions/` ก่อน แล้วค่อยคัดลอกมา deploy
+
 ### SSL Certificate
-- SSL Certificate ใช้เวลา 5-15 นาทีในการ provision
-- ถ้า www.manus-flow.com ยังไม่ใช้งานได้ ให้รอสักครู่
+- SSL Certificate ทั้ง 2 domains พร้อมใช้งานแล้ว
 - ตรวจสอบสถานะได้ที่ Cloudflare Pages > Custom domains
 
 ### API Token Security
@@ -181,6 +256,8 @@ curl -X POST "https://api.cloudflare.com/client/v4/accounts/{account_id}/pages/p
 
 ### Backup
 - โค้ดทั้งหมดถูก backup บน GitHub แล้ว
+- โค้ดภาษาไทยถูก backup ไว้ที่ `versions/th/index.html`
+- โค้ดภาษาอังกฤษถูก backup ไว้ที่ `versions/en/index.html`
 - สามารถ Clone repository ได้ทุกเมื่อ:
   ```bash
   git clone https://github.com/TuiNui39/Landing-Page-Referral-Manus-AI-By-Gemini.git
@@ -200,10 +277,24 @@ curl -X POST "https://api.cloudflare.com/client/v4/accounts/{account_id}/pages/p
 3. ลอง Clear DNS Cache: `ipconfig /flushdns` (Windows) หรือ `sudo dscacheutil -flushcache` (Mac)
 
 ### ต้องการเปลี่ยน Referral Link
-- แก้ไขไฟล์ `index.html` บรรทัด 432:
+- แก้ไขไฟล์ `index.html` ในส่วน JavaScript:
   ```javascript
   const referralLink = "https://manus.im/invitation/YOUR_NEW_CODE";
   ```
+- หรือค้นหา `U9VNR08GX2MX` และแทนที่ด้วยรหัสใหม่
+
+### ต้องการเปลี่ยนภาษา
+- ดูคู่มือในส่วน "การสลับภาษา" ด้านบน
+- หรืออ่านไฟล์ `versions/README.md`
+
+---
+
+## Version History
+
+| Version | Date | Language | Changes |
+|---------|------|----------|---------|
+| 1.0.0 | 2026-01-09 | 🇹🇭 Thai | Initial Thai version |
+| 1.1.0 | 2026-01-09 | 🇺🇸 English | Added English version, multi-language structure |
 
 ---
 
@@ -217,4 +308,4 @@ curl -X POST "https://api.cloudflare.com/client/v4/accounts/{account_id}/pages/p
 
 **สร้างโดย:** Manus AI Agent  
 **วันที่อัปเดตล่าสุด:** 9 มกราคม 2026  
-**เวอร์ชัน:** 1.0.0
+**เวอร์ชัน:** 1.1.0
