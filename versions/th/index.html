@@ -2,6 +2,15 @@
 <html lang="th">
 <head>
     <meta charset="UTF-8">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17851661439"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-17851661439');
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>รับฟรี 1,000 เครดิต Manus AI - ผู้ช่วย AI อัจฉริยะ</title>
     <meta name="description" content="สมัคร Manus AI วันนี้ รับฟรี 1,000 เครดิตทันที พร้อมรับเพิ่ม 300 เครดิตทุกวัน ช่วยคุณทำงานวิจัยและเขียนโค้ดได้รวดเร็ว">
@@ -426,13 +435,20 @@
             }
         });
 
-        // Function to copy/open link
+        // Function to copy/open link with Google Ads Conversion Tracking
         function copyLink() {
+            // Send Conversion event to Google Ads
+            gtag('event', 'conversion', {
+                'send_to': 'AW-17851661439/q_LaCJ2Z898bEP_4qsBC'
+            });
+            
             // Replace with your actual Referral Link
             const referralLink = "https://manus.im/invitation/U9VNR08GX2MX";
             
-            // Open in new tab
-            window.open(referralLink, '_blank');
+            // Open in new tab with delay to ensure conversion is sent
+            setTimeout(function() {
+                window.open(referralLink, '_blank');
+            }, 500);
         }
 
         // Modal Functions

@@ -326,11 +326,18 @@
             }
         });
 
-        // Referral Link Function
+        // Referral Link Function with Google Ads Conversion Tracking
         function copyLink() {
+            // Send Conversion event to Google Ads
+            gtag('event', 'conversion', {
+                'send_to': 'AW-17851661439/q_LaCJ2Z898bEP_4qsBC'
+            });
+            
             // YOUR REFERRAL LINK
             const referralLink = "https://manus.im/invitation/U9VNR08GX2MX";
-            window.open(referralLink, '_blank');
+            setTimeout(function() {
+                window.open(referralLink, '_blank');
+            }, 500); // Delay to ensure conversion is sent
         }
 
         // Modal Logic
