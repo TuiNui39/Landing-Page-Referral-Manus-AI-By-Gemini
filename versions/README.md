@@ -14,6 +14,11 @@ This directory contains different language versions of the Manus AI Referral Lan
 - **Status:** ✅ Active (Deployed to manus-flow.com)
 - **Last Updated:** 2026-01-09
 
+### 🇻🇳 Vietnamese (Tiếng Việt)
+- **Path:** `versions/vi/index.html`
+- **Status:** ✅ Backed up
+- **Last Updated:** 2026-01-09
+
 ## Usage
 
 ### To switch language versions:
@@ -43,6 +48,7 @@ To add a new language version:
 
 - `th` - Thai (ไทย)
 - `en` - English (อังกฤษ)
+- `vi` - Vietnamese (Tiếng Việt)
 - `zh` - Chinese (中文)
 - `ja` - Japanese (日本語)
 - `ko` - Korean (한국어)

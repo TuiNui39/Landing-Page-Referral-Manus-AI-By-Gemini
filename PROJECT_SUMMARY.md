@@ -33,7 +33,9 @@ Landing-Page-Referral-Manus-AI-By-Gemini/
 │   ├── README.md          # คู่มือการใช้งานหลายภาษา
 │   ├── th/                # 🇹🇭 Thai Version
 │   │   └── index.html
-│   └── en/                # 🇺🇸 English Version (Active)
+│   ├── en/                # 🇺🇸 English Version (Active)
+│   │   └── index.html
+│   └── vi/                # 🇻🇳 Vietnamese Version
 │       └── index.html
 ├── README.md               # คำอธิบายโปรเจค
 ├── wrangler.toml          # Cloudflare Wrangler configuration
@@ -56,6 +58,12 @@ Landing-Page-Referral-Manus-AI-By-Gemini/
 - **Status:** ✅ Active (Deployed)
 - **Last Updated:** 2026-01-09
 - **Description:** เวอร์ชันภาษาอังกฤษที่กำลังใช้งานอยู่
+
+### 🇻🇳 Vietnamese (Tiếng Việt)
+- **Path:** `versions/vi/index.html`
+- **Status:** ✅ Backed up
+- **Last Updated:** 2026-01-09
+- **Description:** เวอร์ชันภาษาเวียดนาม
 
 ---
 
@@ -91,18 +99,15 @@ wrangler pages deploy . --project-name=manus-flow-landing
 4. Commit และ Push ขึ้น GitHub
 5. Deploy เมื่อต้องการใช้งาน
 
-**ตัวอย่าง Language Codes:**
-- `th` - Thai (ไทย)
+**ตัวอย่าง Languag- `th` - Thai (ไทย)
 - `en` - English (อังกฤษ)
+- `vi` - Vietnamese (Tiếng Việt)
 - `zh` - Chinese (中文)
 - `ja` - Japanese (日本語)
 - `ko` - Korean (한국어)
 - `es` - Spanish (Español)
 - `fr` - French (Français)
-
----
-
-## เทคโนโลジีที่ใช้
+- `de` - German (Deutsch)โลジีที่ใช้
 
 - **Frontend:** HTML5, Tailwind CSS (via CDN), JavaScript
 - **Icons:** Lucide Icons
@@ -295,6 +300,7 @@ curl -X POST "https://api.cloudflare.com/client/v4/accounts/{account_id}/pages/p
 |---------|------|----------|---------|
 | 1.0.0 | 2026-01-09 | 🇹🇭 Thai | Initial Thai version |
 | 1.1.0 | 2026-01-09 | 🇺🇸 English | Added English version, multi-language structure |
+| 1.2.0 | 2026-01-09 | 🇻🇳 Vietnamese | Added Vietnamese version backup |
 
 ---
 
@@ -308,4 +314,4 @@ curl -X POST "https://api.cloudflare.com/client/v4/accounts/{account_id}/pages/p
 
 **สร้างโดย:** Manus AI Agent  
 **วันที่อัปเดตล่าสุด:** 9 มกราคม 2026  
-**เวอร์ชัน:** 1.1.0
+**เวอร์ชัน:** 1.2.0
