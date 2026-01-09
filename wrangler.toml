@@ -1,0 +1,11 @@
+name = "manus-flow-landing"
+type = "javascript"
+account_id = ""
+workers_dev = true
+route = ""
+zone_id = ""
+
+[env.production]
+name = "manus-flow-landing"
+route = "manus-flow.com/*"
+zone_id = ""
