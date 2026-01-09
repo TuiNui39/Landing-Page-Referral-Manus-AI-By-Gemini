@@ -13,9 +13,21 @@
 ## URLs ที่เกี่ยวข้อง
 
 ### เว็บไซต์ที่ใช้งานได้
-- 🌐 **https://manus-flow.com** (Primary Domain - English Version)
-- 🌐 **https://www.manus-flow.com** (Subdomain - English Version)
-- 🌐 **https://manus-flow-landing.pages.dev** (Cloudflare Pages URL)
+
+#### 🇺🇸 English (Default)
+- 🌐 **https://manus-flow.com** (Primary Domain)
+- 🌐 **https://www.manus-flow.com**
+
+#### 🇹🇭 Thai (ไทย)
+- 🌐 **https://manus-flow.com/th**
+- 🌐 **https://www.manus-flow.com/th**
+
+#### 🇻🇳 Vietnamese (Tiếng Việt)
+- 🌐 **https://manus-flow.com/vn**
+- 🌐 **https://www.manus-flow.com/vn**
+
+#### Cloudflare Pages URL
+- 🌐 **https://manus-flow-landing.pages.dev**
 
 ### Repository & Dashboard
 - 📦 **GitHub Repository:** https://github.com/TuiNui39/Landing-Page-Referral-Manus-AI-By-Gemini
@@ -301,6 +313,7 @@ curl -X POST "https://api.cloudflare.com/client/v4/accounts/{account_id}/pages/p
 | 1.0.0 | 2026-01-09 | 🇹🇭 Thai | Initial Thai version |
 | 1.1.0 | 2026-01-09 | 🇺🇸 English | Added English version, multi-language structure |
 | 1.2.0 | 2026-01-09 | 🇻🇳 Vietnamese | Added Vietnamese version backup |
+| 1.3.0 | 2026-01-09 | 🌐 Multi-lang | Added URL routing (/th, /vn) |
 
 ---
 
@@ -314,4 +327,4 @@ curl -X POST "https://api.cloudflare.com/client/v4/accounts/{account_id}/pages/p
 
 **สร้างโดย:** Manus AI Agent  
 **วันที่อัปเดตล่าสุด:** 9 มกราคม 2026  
-**เวอร์ชัน:** 1.2.0
+**เวอร์ชัน:** 1.3.0
